@@ -1,0 +1,9 @@
+[tools]
+bun = "latest"
+lua = "latest"
+perl = "latest"
+lazygit = "latest"
+node = "lts"
+tmux = "latest"
+neovim = "stable"
+stylua = "latest"

@@ -1,0 +1,7 @@
+[install]
+globalDir="/usr/local/stow/bun/install/global"
+globalBinDir="/usr/local/stow/bun/bin"
+cache="/usr/local/stow/bun/install/cache"
+
+[run]
+bun=true
