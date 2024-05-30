@@ -3,10 +3,9 @@
     "killswitch": 0,
     "dns_custom_ips": [],
     "features": {
-        "netshield": 0,
+        "netshield": 2,
         "moderate_nat": true,
         "vpn_accelerator": true,
         "port_forwarding": false
-    },
-    "anonymous_crash_reports": false
+    }
 }
