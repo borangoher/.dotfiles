@@ -73,20 +73,19 @@ end
 run_once({ "urxvtd", "unclutter -root" }) -- comma-separated entries
 
 -- This function implements the XDG autostart specification
---[[
 awful.spawn.with_shell(
-    'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;' ..
-    'xrdb -merge <<< "awesome.started:true";' ..
-    -- list each of your autostart commands, followed by ; inside single quotes, followed by ..
-    'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
+	'if (xrdb -query | grep -q "^awesome\\.started:\\s*true$"); then exit; fi;'
+		.. 'xrdb -merge <<< "awesome.started:true";'
+		-- list each of your autostart commands, followed by ; inside single quotes, followed by ..
+		.. "nm-applet;"
+		.. 'dex --environment Awesome --autostart --search-paths "$XDG_CONFIG_DIRS/autostart:$XDG_CONFIG_HOME/autostart"' -- https://github.com/jceb/dex
 )
---]]
 
 -- }}}
 
 -- {{{ Variable definitions
 
-local chosen_theme = "powerarrow"
+local chosen_theme = "multicolor"
 local modkey = "Mod4"
 local altkey = "Mod1"
 local terminal = "kitty"
@@ -96,9 +95,9 @@ local editor = os.getenv("EDITOR") or "nvim"
 local browser = "firefox"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { "tmux", "firefox", "spotify", "whatsapp", "education", "utility" }
 awful.layout.layouts = {
-	awful.layout.suit.floating,
+	-- awful.layout.suit.floating,
 	awful.layout.suit.tile,
 	awful.layout.suit.tile.left,
 	awful.layout.suit.tile.bottom,
