@@ -89,11 +89,11 @@ awful.spawn.with_shell(
 local chosen_theme = "powerarrow"
 local modkey = "Mod4"
 local altkey = "Mod1"
-local terminal = "urxvtc"
+local terminal = "kitty"
 local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = os.getenv("EDITOR") or "nvim"
-local browser = "librewolf"
+local browser = "firefox"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5" }
@@ -846,4 +846,3 @@ client.connect_signal("unmanage", backham)
 tag.connect_signal("property::selected", backham)
 
 -- }}}
-
